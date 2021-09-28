@@ -26,6 +26,7 @@
     // The slow response shows how this could work for API calls that
     // take time to execute.
     ThunkableWebviewerExtension.receiveMessageWithReturnValue(function(message, callback) {
+        alert(message);
       if (message === 'slow message') {
         setTimeout(() => callback('slow response'), 4000);
       } else {
